@@ -1,5 +1,5 @@
 // archivo JS sin animaciones por ahora
-console.log("✨ Portafolio de Yuilsi cargado correctamente.");
+console.log("Portafolio cargado correctamente.");
 
 const track = document.querySelector('.carousel-track');
 const prevButton = document.getElementById('prevBtn');
@@ -112,5 +112,20 @@ window.addEventListener('resize', () => {
     menuBg.setAttribute('aria-hidden','true');
   } else {
     navLinks.setAttribute('aria-hidden', navLinks.classList.contains('show') ? 'false' : 'true');
+  }
+});
+
+
+// --- hacer que toda la card sea clickeable ---
+document.querySelectorAll('.card').forEach(card => {
+  const link = card.querySelector('.link');
+  if (link) {
+    card.style.cursor = 'pointer'; // cambia el cursor a "mano"
+    card.addEventListener('click', (e) => {
+      // evita conflicto si se hace clic directamente en el enlace
+      if (!e.target.closest('a')) {
+        window.open(link.href, '_blank'); // abre en nueva pestaña
+      }
+    });
   }
 });
