@@ -656,7 +656,19 @@ section {
 
 /* ==== CONTACTO ==== */
 #contact {
-  background: #f9f9f9;
+  background: col#f9f9f9;
+  margin: 4rem 11rem;
+  padding: 2rem;
+
+  
+}
+
+#descrption {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 1rem;
+
 }
 
 #contact .btn {
